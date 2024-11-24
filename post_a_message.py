@@ -11,7 +11,7 @@ password = os.getenv('password')
 
 def main():
     client = Client()
-    profile = client.login(username, '48ckQo9h0p!e2MgE')
+    profile = client.login(username, password)
     print('Welcome,', profile.display_name)
     
     text = client_utils.TextBuilder().text('Hello World from ').link('Python SDK', 'https://atproto.blue')
