@@ -4,7 +4,16 @@ This project is designed to collect, store, and process data from Blue Sky socia
 
 ## Project Structure
 
-- **scripbles.ipynb**: A Jupyter Notebook for experimenting with the Blue Sky API and testing data collection methods.
+The main scripts you need are :
+
+- **store_bsky_data_in_db.py**: A script to continuously collect posts from the Blue Sky timeline and store them in a SQLite database.
+- **main.py**: The main application file that sets up a web interface for analyzing Blue Sky feed data using AI.
+- **useful_info.md**: Contains useful links and resources for getting started with Blue Sky development.
+- **.env**: Configuration file for storing environment variables and API keys.
+
+others are just for experimenting with the data and the api:
+
+- **scripbles.ipynb**: A Jupyter Notebook for experimenting with the Blue Sky API, testing data collection methods, and analyzing collected data.
 - **get_a_list_of_posts.py**: A script to retrieve and display posts from the user's timeline.
 - **post_a_message.py**: A script to post a message to Blue Sky and interact with posts (e.g., liking a post).
 
@@ -13,7 +22,7 @@ This project is designed to collect, store, and process data from Blue Sky socia
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/bluesky-data-collector.git
+   git clone https://github.com/resolver101757/blue_sky_data
    cd bluesky-data-collector
    ```
 
@@ -27,34 +36,35 @@ This project is designed to collect, store, and process data from Blue Sky socia
 
 3. **Environment Variables**
 
-   Create a `.env` file in the root directory and add your Blue Sky credentials:
+   Create a `.env` file in the root directory and add your credentials:
 
    ```
-   username=your_username
-   password=your_password
+   username=your_bluesky_username
+   password=your_bluesky_password
+   google_api_key=your_google_api_key
    ```
 
 4. **Run the Scripts**
 
-   - To get a list of posts, run:
-
+   - To run the main application:
      ```bash
-     python get_a_list_of_posts.py
+     python main.py
      ```
 
-   - To post a message, run:
+## Features
 
-     ```bash
-     python post_a_message.py
-     ```
+- Collect and store posts from Blue Sky in a SQLite database
+- Post messages to Blue Sky
+- Web interface for analyzing Blue Sky feed using AI (powered by Google's Gemini model)
+- Jupyter Notebook for data exploration and experimentation
 
 ## Future Development
 
-- **Data Storage**: Implement a database to store collected data for further analysis.
-- **Data Processing**: Develop scripts to process and analyze the collected data.
-- **Enhanced API Interaction**: Add more features to interact with the Blue Sky API, such as commenting, sharing, and following users.
-- **Error Handling**: Improve error handling and logging for more robust scripts.
-- **User Interface**: Create a user-friendly interface for non-technical users to interact with the tool.
+- Implement more advanced data processing and analysis techniques
+- Enhance the web interface with more features and visualizations
+- Improve error handling and logging
+- Add user authentication for the web interface
+- Implement real-time data streaming capabilities
 
 ## Contributing
 
@@ -66,4 +76,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For questions or suggestions, please contact [your email](mailto:your.email@example.com).
+For questions or suggestions, please open an issue on the GitHub repository.

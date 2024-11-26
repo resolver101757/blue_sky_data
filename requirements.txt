@@ -1,0 +1,5 @@
+atproto
+python-dotenv
+google-generativeai
+fasthtml
+sqlite3

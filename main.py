@@ -13,8 +13,8 @@ load_dotenv()
 google_api_key = os.getenv('google_api_key')
 genai.configure(api_key=google_api_key)
 
-
-def query_llm(posts):
+# query the llm
+def analyze_feed_topics(posts):
     # Create the model
     generation_config = {
         "temperature": 1,
@@ -124,7 +124,7 @@ def get():
 def generate_query():
     posts = read_sky_data()
     if posts:
-        result = query_llm(posts)
+        result = analyze_feed_topics(posts)
         return Div(
             Div(
                 H3("Topics Discovered", cls="text-lg font-semibold mb-3 text-blue-800"),

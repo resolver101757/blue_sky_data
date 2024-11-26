@@ -1,3 +1,6 @@
+# this script posts a message to the user's timeline
+# this is a test script to get the hang of the atproto library
+
 from atproto import Client, client_utils
 from dotenv import load_dotenv
 import os

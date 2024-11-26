@@ -1,3 +1,6 @@
+# simple script to get a list of posts from a user
+# this is a test script to get the hang of the atproto library
+
 from atproto import Client, client_utils
 from dotenv import load_dotenv
 import os

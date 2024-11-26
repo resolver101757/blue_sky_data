@@ -1,3 +1,4 @@
+# useful links that helped me get started
 
 video on blue sky firehose : https://www.youtube.com/watch?v=P-Uw6ZM_5uU
 blue sky github : https://github.com/bluesky/bluesky
